@@ -81,8 +81,11 @@ class Erlang:
         if erlangs >= channels:
             return 1  # If traffic exceeds capacity, all calls are delayed
 
-        numerator = (math.pow(erlangs, channels) / math.factorial(channels)) * (channels / (channels - erlangs))
-        denominator = sum(math.pow(erlangs, k) / math.factorial(k) for k in range(channels + 1)) + numerator
+        try:
+            numerator = (math.pow(erlangs, channels) / math.factorial(channels)) * (channels / (channels - erlangs))
+            denominator = sum(math.pow(erlangs, k) / math.factorial(k) for k in range(channels + 1)) + numerator
+        except OverflowError:
+            return float('inf')
 
         return numerator / denominator
 
