@@ -24,12 +24,12 @@ class Erlang:
         return erlangs
 
     @staticmethod
-    def calculate_erlang_b(erlangs: float, block_level_goal: float) -> int:
+    def calculate_erlang_b(erlangs: float, block_level_goal: float = 0.01) -> int:
         """
         Calculates the required number of channels to support a given Erlang load and blocking probability.
 
         :param erlangs: The total traffic in Erlangs.
-        :param block_level_goal: The target blocking probability (e.g., 0.01 for 1%).
+        :param block_level_goal: The target blocking probability (e.g., 0.01 for 1%, default = 0.01).
         :return: The required number of channels.
         """
         if erlangs < 0 or block_level_goal <= 0 or block_level_goal >= 1:
