@@ -11,8 +11,8 @@ class Erlang:
         Calculates the traffic load (Erlangs) of a circuit.
 
         :param arrival_rate: The number of calls per hour.
-        :param mean_hold_time: The average hold time per call (minutes).
-        :param average_call_time: The average call duration (minutes).
+        :param mean_hold_time: The average hold time per call (seconds).
+        :param average_call_time: The average call duration (seconds).
         :return: The total traffic Erlangs.
         """
         if arrival_rate < 0 or mean_hold_time < 0 or average_call_time < 0:
