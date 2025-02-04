@@ -100,7 +100,7 @@ print(f"Peak Hour Call Attempts: {phca:.0f}")
 Contributions are welcome! If you have suggestions or optimizations, feel free to submit a **pull request** or open an **issue**.
 
 ## License
-This project is licensed under the **GNU 2.0 License**.
+This project is licensed under the **GNU General Public License v2.0**.
 
 ## Author
 **Jason Callen** www.jasoncallen.com
